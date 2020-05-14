@@ -1,0 +1,6 @@
+[submodule "InputMethodCommon"]
+	path = InputMethodCommon
+	url = https://florianthoma@bitbucket.org/lmu-research-ime/researchime-cyanogenmod-inputmethodcommon.git
+[submodule "LatinIME"]
+	path = LatinIME
+	url = https://florianthoma@bitbucket.org/lmu-research-ime/researchime-latinime-cyanogenmod.git

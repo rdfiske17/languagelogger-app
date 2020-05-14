@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="researchime_keyboard_settings">Research-Keyboard Einstellungen</string>
+
+    <string name="today">Heute</string>
+    <string name="yesterday">Gestern</string>
+    <string name="date_time_formatter">%1$s, %2$s</string>
+
+    <string name="research_registration_title">Es freut uns, dass Sie das ResearchIME-Keyboard verwenden. Nachdem Sie diese Einrichtung abgeschlossen haben, ist das neue Keyboard einsatzbereit.</string>
+    <string name="research_registration">Einrichtung</string>
+    <string name="research_uuid_label">Benutzerkennung</string>
+    <string name="research_uuid_placeholder">Nicht verfügbar</string>
+    <string name="research_gender_title">Geschlecht</string>
+    <string name="research_gender_female">Weiblich</string>
+    <string name="research_gender_male">Männlich</string>
+    <string name="research_age_title">Alter</string>
+    <string name="research_finish_registration">Registrierung starten</string>
+    <string name="research_no_gender_error">Bitte wählen Sie Ihr Geschlecht aus.</string>
+
+</resources>

@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.google.gms:google-services:3.0.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+project.ext {
+    compileSdkVersion = 28
+    buildToolsVersion = "28.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = compileSdkVersion
+    versionCode = 4
+    versionName = '2.0.2'
+    supportLibVersion = '27.1.0'
+    dbflow_version = "4.0.5"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

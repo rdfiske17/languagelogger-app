@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <import type="de.lmu.ifi.researchime.data.base.State"/>
+
+        <variable
+            name="model"
+            type="de.lmu.ifi.researchime.data.messages.model.MessagesContainer"/>
+
+        <variable
+            name="state"
+            type="de.lmu.ifi.researchime.data.base.StateHolder"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_scrollFlags="scroll"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="@string/dashboard_title"/>
+
+            <include
+                layout="@layout/statistics_cell"
+                app:statistics="@{model.statistics}"/>
+
+            <de.lmu.ifi.researchime.views.widgets.ExpandablePanel
+                android:id="@+id/chat_expandable_panel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:collapsedHeight="1dp"
+                app:content="@+id/chat_input_root"
+                app:layout_scrollFlags="scroll">
+
+                <RelativeLayout
+                    android:id="@+id/chat_input_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="5dp">
+
+                    <EditText
+                        android:id="@+id/chat_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/send"
+                        android:enabled="false"
+                        android:hint="@string/hint_message_input"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:padding="15dp"
+                        android:scrollbars="none"
+                        android:textSize="18sp"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/send"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/send_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/send"
+                        android:layout_alignLeft="@+id/send"
+                        android:layout_alignRight="@+id/send"
+                        android:layout_alignTop="@+id/send"
+                        android:layout_centerVertical="true"
+                        android:elevation="15dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="14dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        app:srcCompat="@drawable/ic_send_now"/>
+
+                    <ProgressBar
+                        android:id="@+id/send_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/send"
+                        android:layout_alignLeft="@+id/send"
+                        android:layout_alignRight="@+id/send"
+                        android:layout_alignTop="@+id/send"
+                        android:layout_centerVertical="true"
+                        android:elevation="10dp"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </de.lmu.ifi.researchime.views.widgets.ExpandablePanel>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{!model.empty &amp;&amp; state.state == State.IDLE ? View.VISIBLE : View.GONE}"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <de.lmu.ifi.researchime.views.widgets.AutoFitGridRecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                android:clipToPadding="false"
+                android:columnWidth="300dp"
+                android:overScrollMode="never"
+                android:paddingBottom="30dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="@{model.empty &amp;&amp; state.state == State.WORKING ? View.VISIBLE : View.GONE}"/>
+
+        <Button
+            android:id="@+id/error_view"
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/try_again"
+            android:visibility="@{model.empty &amp;&amp; state.state == State.FAILURE ? View.VISIBLE : View.GONE}"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
+

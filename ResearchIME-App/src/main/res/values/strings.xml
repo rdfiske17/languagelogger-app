@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard_title">Research Keyboard</string>
+    <string name="research_question">Question</string>
+    <string name="try_again">Reload</string>
+    <string name="new_content">NEW</string>
+
+    <string name="research_statistics">Statistics</string>
+    <string name="research_study_name_format">Study name: %1$s</string>
+    <string name="research_events_count_format">Keyboard events: %1$d</string>
+    <string name="research_events_total_format">Total study events: %1$d</string>
+    <string name="research_study_remaining_format">Study end: %1$s</string>
+    <string name="research_current_keyboard">Keyboard layout: %1$s</string>
+
+    <string name="hint_message_input">Insert message</string>
+    <string name="send_message_title">Send message</string>
+    <string name="message_overview_title">Messages</string>
+    <string name="empty_message">Empty message</string>
+    <string name="no_connection">Connection error</string>
+    <string name="send_success">Message sent. We will answer as soon as possible.</string>
+    <string name="send_error">Connection error, message not sent.</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/research_settings_screen">
+    <EditTextPreference
+        android:editable="false"
+        android:title="@string/research_uuid_label"
+        android:summary="@string/research_uuid_placeholder"
+        android:key="@string/research_preference_key_user_id" />
+    <EditTextPreference
+        android:title="@string/research_server_address"
+        android:defaultValue="@string/research_default_server_address"
+        android:persistent="true"
+        android:key="@string/research_preference_key_server_address" />
+    <Preference
+        android:title="@string/research_preference_feedback_email"
+        android:summary="@string/research_feedback_mail"
+        android:key="@string/research_preference_key_email" />
+</PreferenceScreen>

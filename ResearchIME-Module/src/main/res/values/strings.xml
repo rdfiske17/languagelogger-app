@@ -1,0 +1,100 @@
+<resources>
+    <string name="researchime_app_name">Research Keyboard</string>
+    <string name="researchime_keyboard_settings">Research Keyboard configuration</string>
+
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="date_time_formatter">%1$s, %2$s</string>
+
+    <string name="research_keyboard_settings_title">Settings</string>
+    <string name="research_info_title">About</string>
+    <string name="research_info_text">@string/research_feedback_mail</string>
+
+    <string name="research_private_mode_button_description">Private Mode</string>
+
+    <string name="research_registration_title">Welcome!</string>
+    <string name="research_registration">Registration</string>
+    <string name="research_uuid_label">User ID</string>
+    <string name="research_uuid_placeholder">Not available</string>
+    <string name="research_gender_title">Gender</string>
+    <string name="research_gender_female">Female</string>
+    <string name="research_gender_male">Male</string>
+    <string name="research_age_title">Age</string>
+    <string name="research_finish_registration">Done</string>
+    <string name="research_no_gender_error">Please select your gender</string>
+
+    <string name="setup_completion_title">Please wait while setup is completing</string>
+    <string name="setup_completion_text">ResearchIME installs all required components</string>
+    <string name="setup_completion_progress_text">%1$d of %2$d steps completed</string>
+
+    <string name="research_registration_success">Registration successful!</string>
+    <string name="research_setup_failed">Some required components could not be downloaded! Please make sure you have a good internet connection and some free space on your device.</string>
+
+
+    <!-- preferences -->
+    <string name="research_settings_screen">Research Settings</string>
+    <string name="research_preference_key_user_id" translatable="false">research_preference_key_user_id</string>
+    <string name="research_preference_key_email" translatable="false">research_preference_key_email</string>
+    <string name="research_preference_feedback_email">Support and Feedback</string>
+    <string name="research_feedback_mail_subject">Research Keyboard</string>
+    <string name="research_mail_prompt">Send me an email!</string>
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- IN APP CONFIGURATIONS -->
+    <!-- cannot be changed remotely -->
+
+
+
+    <string name="research_feedback_mail" translatable="false">researchime@researchime.com</string>
+
+    <!-- age chooser for registration -->
+    <integer name="research_min_age">18</integer>
+    <integer name="research_max_age">150</integer>
+
+    <!-- max interval at which the remote configuration is updated from the server -->
+    <integer name="research_max_config_check_interval_seconds">3600</integer>
+
+
+    <!-- only supported filter currently -->
+    <!-- lets randomly selected n-grams pass with probability p -->
+    <!-- after a logged n-gram there is a minimum gap of 1 -->
+    <bool name="filter_ngram">true</bool>
+    <!-- filter 3-grams -->
+    <integer name="filter_ngram_n">3</integer>
+    <!-- filter each 3-gram with 15% probability -->
+    <string name="filter_ngram_p">0.1</string>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- REMOTE CONFIGURATIONS -->
+    <!-- are retrieved through <server>/config  -->
+    <!-- strings must match configuration on server -->
+    <!-- for documentation see server config file -->
+
+    <string-array name="research_remote_configurations" translatable="false">
+        <item>@string/research_config_event_transmission_threshold</item>
+        <item>@string/research_config_sensors</item>
+        <item>@string/research_config_sensor_sampling_millis</item>
+        <item>@string/research_config_sensor_values_outdated_millis</item>
+        <item>@string/research_config_hand_posture_prompt_timeout_millis</item>
+    </string-array>
+
+    <string name="research_config_event_transmission_threshold" translatable="false">event-transmission-threshold</string>
+    <integer name="research_config_event_transmission_threshold_default">1000</integer>
+
+    <string name="research_config_sensors" translatable="false">sensors</string>
+
+    <string name="research_config_sensor_sampling_millis" translatable="false">sensor-sampling-millis</string>
+    <integer name="research_config_sensor_sampling_millis_default">1000</integer>
+
+    <string name="research_config_sensor_values_outdated_millis" translatable="false">sensor-values-outdated-millis</string>
+    <integer name="research_config_sensor_values_outdated_millis_default">2000</integer>
+
+    <string name="research_config_hand_posture_prompt_timeout_millis" translatable="false">hand-posture-prompt-timeout-millis</string>
+    <integer name="research_config_hand_posture_prompt_timeout_millis_default">600000</integer> <!-- 10min -->
+
+</resources>

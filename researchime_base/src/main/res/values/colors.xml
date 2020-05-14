@@ -1,0 +1,13 @@
+<resources>
+    <color name="colorPrimary">#004d40</color>
+    <color name="colorPrimaryDark">#004d40</color>
+    <color name="colorAccent">#607d8b</color>
+
+    <color name="bg_color">#EEEEEE</color>
+    <color name="card_bg_color">#FAFAFA</color>
+    <color name="text_color_default">#DE000000</color>
+    <color name="text_color_gray">#8A000000</color>
+    <color name="text_color_light">#FFFFFFFF</color>
+
+    <color name="new_content_indicator">@color/colorAccent</color>
+</resources>

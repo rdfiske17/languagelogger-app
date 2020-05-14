@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ResearchIME-ContentAbstraction</string>
+
+    <string name="research_registration_success">Registrierung erfolgreich abgeschlossen.</string>
+    <string name="research_setup_failed">Einige Komponenten konnten nicht heruntergeladen werden! Bitte stellen Sie sich dass ihr Geräte über eine gute Internetverbindung und etwas freien Speicher verfügt.</string>
+
+    <string name="setup_completion_title">Die Einrichtung wird abgeschlossen</string>
+    <string name="setup_completion_text">ResearchIME installiert alle benötigten Komponenten</string>
+    <string name="setup_completion_progress_text">%1$d von %2$d Schritten abgeschlossen</string>
+</resources>

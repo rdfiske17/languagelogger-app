@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.ifi.lmu.researchime.contentabstraction">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application>
+
+        <activity
+            android:name="de.lmu.ifi.researchime.contentabstraction.setup.SetupCompletionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <service android:name="de.lmu.ifi.researchime.contentabstraction.contentanalysers.WordCategorizerJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
+        <service android:name="de.lmu.ifi.researchime.contentabstraction.contentanalysers.WordFrequencyCounterJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
+        <service android:name="de.lmu.ifi.researchime.contentabstraction.contentanalysers.patternmatching.PatternMatcherJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
+        <service android:name="de.lmu.ifi.researchime.contentabstraction.treetagger.TreeTaggerService"
+        />
+
+        <service android:name="de.lmu.ifi.researchime.contentabstraction.CleanupContentChangeEventsJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>

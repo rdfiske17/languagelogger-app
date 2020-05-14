@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="de.lmu.ifi.researchime">
+
+    <application
+        android:name="de.lmu.ifi.researchime.ApplicationController"
+        android:allowBackup="false"
+        android:icon="@mipmap/research_ic_launcher"
+        android:label="@string/researchime_app_name"
+        android:supportsRtl="true"
+        tools:replace="android:label, android:icon, android:allowBackup">
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="researchime.db"/>
+        <meta-data
+            android:name="VERSION"
+            android:value="1.0.1"/>
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true"/>
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="de.lmu.ifi.researchime"/>
+
+        <activity
+            android:name=".ResearchIMEActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DashboardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".SetupPhoneStudyConnectionActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
+
+        <service
+            android:name=".messaging.MessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".messaging.MessagingInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>

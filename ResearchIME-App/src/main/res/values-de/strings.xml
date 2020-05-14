@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard_title">Research Keyboard</string>
+    <string name="research_question">Nachricht an den Studie-Support</string>
+    <string name="try_again">Erneut versuchen</string>
+    <string name="new_content">Neu</string>
+
+    <string name="research_statistics">Statistik</string>
+    <string name="research_study_name_format">Studie: %1$s</string>
+    <string name="research_events_count_format">Meine Events: %1$d</string>
+    <string name="research_events_total_format">Alle Events: %1$d</string>
+    <string name="research_study_remaining_format">Ende der Studie: %1$s</string>
+    <string name="research_current_keyboard">Keyboard-Layout: %1$s</string>
+
+    <string name="hint_message_input">Nachricht eingeben </string>
+    <string name="send_message_title">Nachricht senden</string>
+    <string name="message_overview_title">Nachrichten</string>
+    <string name="empty_message">Kein Nachrichtentext vorhanden.</string>
+    <string name="no_connection">Keine Internetverbindung</string>
+    <string name="send_success">Nachricht erfolgreich gesendet. Wir werden so schnell wie möglich auf Ihre Nachricht reagieren.</string>
+    <string name="send_error">Keine Verbindung, Nachricht nicht gesendet.</string>
+
+</resources>

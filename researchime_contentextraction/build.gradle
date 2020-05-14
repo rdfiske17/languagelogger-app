@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ targetModuleName : 'RimeContentextraction' ]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'boolean', 'LOG_TO_FILE', 'false'
+            buildConfigField 'boolean', 'LOG_TO_NOTIFICATION', 'false'
+        }
+        debug {
+            buildConfigField 'boolean', 'LOG_TO_FILE', 'true'
+            buildConfigField 'boolean', 'LOG_TO_NOTIFICATION', 'false'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(":researchime_contentabstraction")
+    api project(":researchime_base")
+
+    api 'org.apache.commons:commons-lang3:3.4'
+
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${project.dbflow_version}"
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

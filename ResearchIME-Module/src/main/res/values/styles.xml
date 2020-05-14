@@ -1,0 +1,28 @@
+<resources>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="DefaultCardViewCellStyle">
+        <item name="cardBackgroundColor">@color/card_bg_color</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardUseCompatPadding">false</item>
+    </style>
+
+    <style name="CardViewCellStyle" parent="DefaultCardViewCellStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>
+
+    <style name="GrayTextStyle" parent="DefaultTextStyle">
+        <item name="android:textColor">@color/text_color_gray</item>
+    </style>
+
+    <style name="HeaderTextStyle" parent="DefaultTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

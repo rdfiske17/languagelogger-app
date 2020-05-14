@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "394034714097",
+    "firebase_url": "https://researchime-f277c.firebaseio.com",
+    "project_id": "researchime-f277c",
+    "storage_bucket": "researchime-f277c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394034714097:android:716f505e395d0ff5",
+        "android_client_info": {
+          "package_name": "de.lmu.ifi.researchime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394034714097-fjr11bkbhnkjq7qoud9rnur1pp9haq7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFWgw4ED6qE3A-ReKaxOghCwD10FuoY4o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

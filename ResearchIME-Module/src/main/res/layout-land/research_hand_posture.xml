@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/research_hand_postures"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#cc000000"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:id="@+id/research_hand_posture_left_index"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="113"
+                android:layout_margin="8dp"
+                android:src="@drawable/finger_left_index"/>
+
+            <ImageView
+                android:id="@+id/research_hand_posture_two_index"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="179"
+                android:layout_margin="8dp"
+                android:src="@drawable/finger_two_index"/>
+
+            <ImageView
+                android:id="@+id/research_hand_posture_right_index"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="113"
+                android:layout_margin="8dp"
+                android:src="@drawable/finger_right_index"/>
+
+            <ImageView
+                android:id="@+id/research_hand_posture_left_thumb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="107"
+                android:layout_margin="8dp"
+                android:src="@drawable/finger_left_thumb"/>
+
+            <ImageView
+                android:id="@+id/research_hand_posture_two_thumb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="144"
+                android:layout_margin="8dp"
+                android:src="@drawable/finger_two_thumb"/>
+
+            <ImageView
+                android:id="@+id/research_hand_posture_right_thumb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="107"
+                android:layout_margin="8dp"
+                android:src="@drawable/finger_right_thumb"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
