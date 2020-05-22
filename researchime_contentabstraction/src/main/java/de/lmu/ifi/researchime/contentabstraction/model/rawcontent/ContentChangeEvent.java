@@ -1,6 +1,6 @@
 package de.lmu.ifi.researchime.contentabstraction.model.rawcontent;
 
-import androidx.annotation.NonNull;
+//import androidx.annotation.NonNull;
 
 import com.google.gson.annotations.Expose;
 import com.raizlabs.android.dbflow.StringUtils;
@@ -271,7 +271,7 @@ public class ContentChangeEvent extends BaseModel {
         this.date = date;
     }
 
-    @NonNull
+   // @NonNull
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

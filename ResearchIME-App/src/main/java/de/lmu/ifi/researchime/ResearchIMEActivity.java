@@ -19,8 +19,8 @@ package de.lmu.ifi.researchime;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
 public class ResearchIMEActivity extends AppCompatActivity {
 

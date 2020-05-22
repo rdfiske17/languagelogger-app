@@ -16,7 +16,7 @@
 
 package de.lmu.ifi.researchime.recycler.binding;
 
-import androidx.annotation.LayoutRes;
+import android.support.annotation.LayoutRes;
 
 public class ItemBinderBase<T> implements ItemBinderInterface<T> {
     private final int bindingVariable;

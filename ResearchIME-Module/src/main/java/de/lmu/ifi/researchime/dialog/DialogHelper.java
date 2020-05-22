@@ -18,7 +18,7 @@ package de.lmu.ifi.researchime.dialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import androidx.appcompat.app.AlertDialog;
+import android.support.v7.app.AlertDialog;
 
 import de.lmu.ifi.researchime.module.R;
 

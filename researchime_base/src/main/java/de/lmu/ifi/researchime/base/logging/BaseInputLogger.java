@@ -5,7 +5,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Environment;
 
-import androidx.core.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat;
 
 import java.io.BufferedWriter;
 import java.io.File;

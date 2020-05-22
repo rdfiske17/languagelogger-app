@@ -16,7 +16,7 @@
 
 package de.lmu.ifi.researchime.recycler.binding;
 
-import androidx.annotation.LayoutRes;
+import android.support.annotation.LayoutRes;
 
 public class SectionItemDataBinder<T> extends ItemBinderBase<T> {
 

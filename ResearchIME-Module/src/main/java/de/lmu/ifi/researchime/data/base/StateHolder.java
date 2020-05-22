@@ -16,8 +16,8 @@
 
 package de.lmu.ifi.researchime.data.base;
 
-import androidx.databinding.BaseObservable;
-import androidx.databinding.ObservableInt;
+import android.databinding.BaseObservable;
+import android.databinding.ObservableInt;
 
 import java.util.HashSet;
 import java.util.Set;

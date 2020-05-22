@@ -21,8 +21,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 
 /**
  * An activity to help request permissions. It's used when no other activity is available, e.g. in

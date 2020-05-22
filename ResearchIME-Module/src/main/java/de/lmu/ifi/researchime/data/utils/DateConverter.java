@@ -17,7 +17,7 @@
 package de.lmu.ifi.researchime.data.utils;
 
 import android.content.Context;
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

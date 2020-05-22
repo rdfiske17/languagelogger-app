@@ -43,7 +43,8 @@ dependencies {
     api 'com.squareup.okhttp:okhttp:2.7.5'
     api 'com.squareup.retrofit:retrofit:1.9.0'
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    //implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.android.support:appcompat-v7:' + project.supportLibVersion
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

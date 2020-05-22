@@ -24,7 +24,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import androidx.core.app.ActivityCompat;
+import android.support.v4.app.ActivityCompat;
+
 
 /**
  * Spell checker preference screen.

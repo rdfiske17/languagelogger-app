@@ -18,7 +18,7 @@ package de.lmu.ifi.researchime.recycler.adapter;
 
 import android.animation.PropertyValuesHolder;
 import android.content.Context;
-import androidx.recyclerview.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView;
 
 import de.lmu.ifi.researchime.R;
 

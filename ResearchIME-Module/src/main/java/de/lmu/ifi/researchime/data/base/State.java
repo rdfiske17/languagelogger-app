@@ -16,7 +16,7 @@
 
 package de.lmu.ifi.researchime.data.base;
 
-import androidx.annotation.IntDef;
+import android.support.annotation.IntDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

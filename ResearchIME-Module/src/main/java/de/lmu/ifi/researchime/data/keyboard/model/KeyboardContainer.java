@@ -16,7 +16,7 @@
 
 package de.lmu.ifi.researchime.data.keyboard.model;
 
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import java.io.Serializable;

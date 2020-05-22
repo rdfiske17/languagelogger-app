@@ -16,8 +16,8 @@
 
 package de.lmu.ifi.researchime.recycler.listener;
 
-import androidx.databinding.ObservableList;
-import androidx.recyclerview.widget.RecyclerView;
+import android.databinding.ObservableList;
+import android.support.v7.widget.RecyclerView;
 
 import java.lang.ref.WeakReference;
 

@@ -16,7 +16,7 @@
 
 package com.android.inputmethod.latin.accounts;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import javax.annotation.Nullable;
 

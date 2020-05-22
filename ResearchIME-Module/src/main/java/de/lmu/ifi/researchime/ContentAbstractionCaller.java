@@ -2,7 +2,7 @@ package de.lmu.ifi.researchime;
 
 import android.content.Context;
 import android.content.Intent;
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 

@@ -16,7 +16,7 @@
 
 package de.lmu.ifi.researchime.data.base;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import java.io.Serializable;
 import java.util.concurrent.ExecutorService;
