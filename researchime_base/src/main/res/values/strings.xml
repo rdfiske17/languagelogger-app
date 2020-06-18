@@ -7,7 +7,7 @@
     <string name="research_api_user_agent" translatable="false">ResearchIME-Android</string>
 
     <!-- server address -->
-    <string name="research_default_server_address" translatable="false">http://localhost:9000</string>
+    <string name="research_default_server_address" translatable="false">https://quality.phonestudy.psy.lmu.de:9003</string>
 
     <!-- because downloading the word lists can take long -->
     <string name="okhttp_read_timeout_secs">60</string>
