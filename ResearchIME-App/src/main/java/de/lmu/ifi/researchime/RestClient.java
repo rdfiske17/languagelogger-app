@@ -94,7 +94,7 @@ public class RestClient {
         try {
             // loading CAs from an InputStream
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
-            InputStream cert = context.getResources().openRawResource(R.raw.phonestudy_psy_lmu_de_fullchain);
+            InputStream cert = context.getResources().openRawResource(R.raw.research_crt); // TODO replace this file's content with your server's certificate
             Certificate ca;
             try {
                 ca = cf.generateCertificate(cert);
