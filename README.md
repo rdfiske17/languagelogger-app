@@ -1,31 +1,28 @@
-# ResearchIME Study App
+# Language Logger Research App (former "ResearchIME")
 
-Welcome to the repo for the ResearchIME Study App. In order to conduct user studies the system consists an Android App and a Web Server, which communicates with all the users smartphones but and allows the researcher to setup his study aswell as get overview of the collected keyboard events in form of an web interface.
+Language Logger is a research tool that enables **studies on mobile language use in the wild**. The LanguageLogger Android app can be installed on study participants' smartphones. **The app logs** when the user tyes words of predefined **word categories** (either just the category name or the raw word), count **word frequencies**, and log the usage of words that match a **regular expression**.
 
-The repository for the webserver can be found here:
+With this on-device language abstraction approach, **typed language on smartphones can be observed in the wild in a privacy-friendly manner**. No raw text data leaves the user's device.
+Furthermore it is also possible to log touch data (typing speed, touch positions, ...), used messenger apps, and configure custom keyboard layouts for each study condition.
 
-https://gitlab.lrz.de/researchime/researchime-server
+![Evolutions database migration](./readme_images/paperteaser.jpg)
 
-# Android App
+Please checkout the research papers about this tool for more details:
+
+* [Bemmann, Buschek 2020. LanguageLogger: A Mobile Keyboard Application for Studying Language Use in Everyday Text Communication in the Wild](https://dl.acm.org/doi/pdf/10.1145/3397872)
+
+* [Buschek, Bisinger, Alt 2018. ResearchIME: A mobile keyboard application for studying free typing behaviour in the wild](https://dl.acm.org/doi/abs/10.1145/3173574.3173829)
+
+
+This GitHub project contains the clientside (Android App) of the research tool LanguageLogger. To manage the study configuration, and record the logged data, a backend is necessary. You can find it in this repo:
+
+https://github.com/Flo890/languagelogger-backend
+
+
+# Getting Started with the Android App
 
 This Android is build on top of the Google Keyboard.
 The Minimum required Android Version is `5.0`
-
-### Try it out: Download APK
-
-There is a precompiled APK in `\apk`.
-
-***However, for a real user study setup, you should open the project in Android Studio to sign and compile your own apk.***
-
-When first starting App the user will be guided through a setup process.
-With the precompiled APK, during the setup process the user has to set the server adress (which could be your PCs local IP address for example):
-
-
-|                                        |                                        |                                        |                                        |                                        |
-|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
-|![](./readme_images/android_setup_1.png)|![](./readme_images/android_setup_2.png)|![](./readme_images/android_setup_3.png)|![](./readme_images/android_setup_4.png)|![](./readme_images/android_setup_5.png)|![](./readme_images/android_setup_6.png)|
-
-Afterwards he can continue the registration.
 
 
 ## Open in Android Studio
@@ -47,6 +44,8 @@ and
 <string name="research_feedback_mail" translatable="false">yourResearchEmailAdress</string>
 ```
 
+If you don't have a language logger server setup yet, checkout [the backend project's README](https://github.com/Flo890/languagelogger-backend/blob/master/README.md).
+
 ## Create a signed APK for Production
 
 Before creating the APK make sure, that you configured the server address and your e-mail address as descriped above.
@@ -54,7 +53,7 @@ Before creating the APK make sure, that you configured the server address and yo
 * Download the `researchime.cert` file, which you generated in the server repo (you can use scp:
 `scp user@server:/conf/researchime.cert` <target_path>)
 * Paste the content of the file in
-`researchime-app/ResearchIME-Module/src/main/res/raw/research_crt.cert`
+`languagelogger-app/ResearchIME-Module/src/main/res/raw/research_crt.cert`
 This adds the servers certificate to the android app
 * Create a new certificate to sign the APK:
 `keytool -genkey -keyalg RSA -alias researchime -keystore keystore.jks -storepass researchime -keysize 2048`
