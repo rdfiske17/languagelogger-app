@@ -31,7 +31,7 @@ The Minimum required Android Version is `5.0`
 (if you realy would like to do so, you must disable Instant Run afterwards, as some used libraries do not support it)
 * Android Studio tell you some SDK or Build Tool Versions are missing. Download and install them as prompted.
 
-* Be aware that the App does not support the Android Emulator, as the modificated Google Keyboard will only work on physical devices.
+* Be aware that the App does not support the Android Emulator, as the modified Google Keyboard will only work on physical devices.
 
 * You should configure the address of your server and the e-mail address of where participants can contact you.
 Therefore you have do edit the following values in
@@ -41,7 +41,7 @@ Therefore you have do edit the following values in
 ```
 and 
 ```xml
-<string name="research_feedback_mail" translatable="false">yourResearchEmailAdress</string>
+<string name="research_feedback_mail" translatable="false">yourResearchEmailAddress</string>
 ```
 
 If you don't have a language logger server setup yet, checkout [the backend project's README](https://github.com/Flo890/languagelogger-backend/blob/master/README.md).
@@ -50,11 +50,9 @@ If you don't have a language logger server setup yet, checkout [the backend proj
 
 Before creating the APK make sure, that you configured the server address and your e-mail address as descriped above.
 
-* Download the `researchime.cert` file, which you generated in the server repo (you can use scp:
-`scp user@server:/conf/researchime.cert` <target_path>)
-* Paste the content of the file in
+* Paste the content of your server's certificate into the file 
 `languagelogger-app/ResearchIME-Module/src/main/res/raw/research_crt.cert`
-This adds the servers certificate to the android app
+* Uncomment the certificate check in `RestClient` (the line starting with `client.setSslSocketFactory(...`)
 * Create a new certificate to sign the APK:
 `keytool -genkey -keyalg RSA -alias researchime -keystore keystore.jks -storepass researchime -keysize 2048`
 * Open Build -> Generate Signed APK, select generated `keystore.jks`, enter password and alias (researchime) 

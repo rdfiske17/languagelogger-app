@@ -114,7 +114,7 @@ public class RestClient {
             // creating an SSLSocketFactory that uses our TrustManager
             SSLContext sslContext = SSLContext.getInstance("TLS");
             sslContext.init(null, tmf.getTrustManagers(), null);
-            client.setSslSocketFactory(sslContext.getSocketFactory());
+        //    client.setSslSocketFactory(sslContext.getSocketFactory()); TODO Put your certificate into research_crt.crt and uncomment this
             client.setReadTimeout(Long.valueOf(context.getString(R.string.okhttp_read_timeout_secs)), TimeUnit.SECONDS);
 
         } catch (CertificateException | NoSuchAlgorithmException | KeyStoreException | IOException | KeyManagementException e) {

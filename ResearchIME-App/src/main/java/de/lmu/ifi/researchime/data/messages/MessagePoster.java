@@ -21,7 +21,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-import de.lmu.ifi.researchime.RestClient;
+import de.lmu.ifi.researchime.base.RestClient;
 import de.lmu.ifi.researchime.data.messages.model.MessageModel;
 import retrofit.ResponseCallback;
 import retrofit.RetrofitError;

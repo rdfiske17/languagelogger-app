@@ -8,6 +8,12 @@
 
     <!-- server address -->
     <string name="research_default_server_address" translatable="false">http://localhost:9000</string>
+    <!-- TODO network configuration for production use:
+    - Paste your URL in the property above
+    - Put your certificate into research_crt.cert
+    - uncomment the  client.setSslSocketFactory... call in RestClient
+
+    -->
 
     <!-- because downloading the word lists can take long -->
     <string name="okhttp_read_timeout_secs">60</string>
