@@ -39,7 +39,7 @@ public class EventTransmitter {
 
         final JsonArray array = new JsonArray();
         for (EventJson event : events){
-            array.add(event.getJson());
+            array.add(event.getJsonAsJsonElement());
         }
 
         JsonObject object = new JsonObject();
