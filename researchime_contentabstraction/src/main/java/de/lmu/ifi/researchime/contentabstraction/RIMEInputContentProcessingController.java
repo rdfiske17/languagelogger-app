@@ -13,6 +13,7 @@ import com.raizlabs.android.dbflow.config.RimeContentabstractionGeneratedDatabas
 
 import java.util.List;
 
+import de.lmu.ifi.researchime.base.BuildConfig;
 import de.lmu.ifi.researchime.contentabstraction.contentanalysers.WordCategorizerJobService;
 import de.lmu.ifi.researchime.contentabstraction.contentanalysers.WordFrequencyCounterJobService;
 import de.lmu.ifi.researchime.contentabstraction.contentanalysers.patternmatching.PatternMatcherJobService;
@@ -100,15 +101,20 @@ public class RIMEInputContentProcessingController {
                 PersistableBundle bundle = new PersistableBundle();
                 bundle.putLong(WordCategorizerJobService.PARAM_KEY_LOGICALLISTID, logicalCategoryList.getLogicallistId());
 
+
+                JobInfo.Builder builder = new JobInfo.Builder(
+                        (WordCategorizerJobService.TAG + logicalCategoryList.getLogicallistId()).hashCode(),
+                        new ComponentName(context, WordCategorizerJobService.class)
+                ).setExtras(bundle);
+                if (BuildConfig.DEBUG) {
+                    builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY); // to simplify testing
+                }
+                else {
+                    builder.setRequiresDeviceIdle(true);
+                }
                 JobScheduler jobSchedulerCategorization =
                         (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
-                jobSchedulerCategorization.schedule(
-                        new JobInfo.Builder(
-                                (WordCategorizerJobService.TAG + logicalCategoryList.getLogicallistId()).hashCode(),
-                                new ComponentName(context, WordCategorizerJobService.class)
-                        ).setExtras(bundle)
-                                .setRequiresDeviceIdle(true)
-                                .build());
+                jobSchedulerCategorization.schedule(builder.build());
                 LogHelper.i(TAG, "scheduled WordCategorizerJobService");
             }
 
@@ -121,15 +127,19 @@ public class RIMEInputContentProcessingController {
                 PersistableBundle bundle = new PersistableBundle();
                 bundle.putLong(WordFrequencyCounterJobService.PARAM_KEY_LOGICALLISTID, logicalWordList.getLogicallistId());
 
+                JobInfo.Builder builder = new JobInfo.Builder(
+                        (WordFrequencyCounterJobService.TAG + logicalWordList.getLogicallistId()).hashCode(),
+                        new ComponentName(context, WordFrequencyCounterJobService.class)
+                ).setExtras(bundle);
+                if (BuildConfig.DEBUG) {
+                    builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY); // to simplify testing
+                }
+                else {
+                    builder.setRequiresDeviceIdle(true);
+                }
                 JobScheduler jobSchedulerCategorization =
                         (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
-                jobSchedulerCategorization.schedule(
-                        new JobInfo.Builder(
-                                (WordFrequencyCounterJobService.TAG + logicalWordList.getLogicallistId()).hashCode(),
-                                new ComponentName(context, WordFrequencyCounterJobService.class)
-                        ).setExtras(bundle)
-                                .setRequiresDeviceIdle(true)
-                                .build());
+                jobSchedulerCategorization.schedule(builder.build());
                 LogHelper.i(TAG, "scheduled WordFrequencyCounterJobService");
             }
 
@@ -137,15 +147,19 @@ public class RIMEInputContentProcessingController {
             for(PatternMatcherConfig patternMatcherConfig : rimeContentAbstractionConfig.getPatternMatcherConfigs()) {
                 PersistableBundle bundle = new PersistableBundle();
                 bundle.putLong(PatternMatcherJobService.PARAM_KEY_PATTERNID, patternMatcherConfig.getRegexMatcherId());
+                JobInfo.Builder builder =  new JobInfo.Builder(
+                        PatternMatcherJobService.TAG.hashCode(),
+                        new ComponentName(context, PatternMatcherJobService.class)
+                ).setExtras(bundle);
+                if (BuildConfig.DEBUG) {
+                    builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY);
+                }
+                else {
+                    builder.setRequiresDeviceIdle(true);
+                }
                 JobScheduler jobSchedulerCategorization =
                         (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
-                jobSchedulerCategorization.schedule(
-                        new JobInfo.Builder(
-                                PatternMatcherJobService.TAG.hashCode(),
-                                new ComponentName(context, PatternMatcherJobService.class)
-                        ).setExtras(bundle)
-                                .setRequiresDeviceIdle(true)
-                                .build());
+                jobSchedulerCategorization.schedule(builder.build());
                 LogHelper.i(TAG, "scheduled PatternMatcherJobService");
             }
         }
