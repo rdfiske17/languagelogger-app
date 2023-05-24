@@ -4,8 +4,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath 'com.google.gms:google-services:4.3.10'
     }
 }
 
@@ -19,7 +19,7 @@ allprojects {
 
 project.ext {
     compileSdkVersion = 28
-    buildToolsVersion = "27.0.3"
+    buildToolsVersion = "30.0.3"
     minSdkVersion = 21
     targetSdkVersion = compileSdkVersion
     versionCode = 4
