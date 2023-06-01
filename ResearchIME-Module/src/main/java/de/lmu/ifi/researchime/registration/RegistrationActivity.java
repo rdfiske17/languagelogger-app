@@ -119,7 +119,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         int age = binding.ageNumberPicker.getValue();
         User user = UserRegistrationHandler.createUser(RegistrationActivity.this, userUuid, gender, age);
-        postToServer(user);
+        //postToServer(user);
     }
 
     private void postToServer(final User user) {

@@ -43,7 +43,7 @@ public class UserRegistrationHandler {
     public static @Nullable User getUserOrLaunchRegistration(Context context){
         User user = getUser();
         if(user == null){
-            RegistrationActivity.launch(context);
+            //RegistrationActivity.launch(context);
         }
         return user;
     }

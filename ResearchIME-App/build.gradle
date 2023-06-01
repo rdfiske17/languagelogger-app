@@ -33,7 +33,7 @@ dependencies {
     implementation project(":Keyboard")
     implementation project(":ResearchIME-Module")
     implementation 'com.google.firebase:firebase-messaging:10.0.1'
-    implementation "com.github.Raizlabs.DBFlow:dbflow:4.0.3"
+    implementation "com.github.raizlabs.dbflow:dbflow:4.0.3"
     implementation project(path: ':researchime_contentextraction')
 }
 

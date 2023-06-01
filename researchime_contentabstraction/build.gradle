@@ -32,9 +32,9 @@ dependencies {
 
 
     // stuff for the new DBFlow ORM
-    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${project.dbflow_version}"
-    implementation "com.github.Raizlabs.DBFlow:dbflow-core:${project.dbflow_version}"
-    api "com.github.Raizlabs.DBFlow:dbflow:${project.dbflow_version}"
+    annotationProcessor "com.github.raizlabs.dbflow:dbflow-processor:${project.dbflow_version}"
+    implementation "com.github.raizlabs.dbflow:dbflow-core:${project.dbflow_version}"
+    api "com.github.raizlabs.dbflow:dbflow:${project.dbflow_version}"
     implementation "org.annolab.tt4j:org.annolab.tt4j:1.2.1"
     implementation 'commons-io:commons-io:2.6'
 
